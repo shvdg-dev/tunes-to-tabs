@@ -1,0 +1,29 @@
+# Authentication related
+Login = "Login"
+Logout = "Logout"
+Password = "Password"
+Register = "Register"
+Email = "E-mail"
+RegisterQuestion = "Not yet an account?"
+InvalidEmailOrPassword = "Invalid e-mail or password"
+ForgotPasswordQuestion = "Forgot your password?"
+ResetPassword = "Reset your password"
+AuthenticationRequired = "You are required to be authenticated"
+NotAuthenticatedTitle = "401 - Not authenticated, whoops!"
+
+# Navigation related
+Home = "Home"
+Docs = "Docs"
+NavigateToLogin = "Go to login"
+NavigateToHome = "Come back home"
+PageNotFound = "This page does not even exist!?"
+PageNotFoundTitle = "404 - Page not found!"
+
+# Page Introductions
+HomeIntroduction = "Welcome on the home page!"
+DocsIntroduction = "Welcome to the docs! It is empty of course!"
+
+# Other
+Welcome = "Welcome"
+Profile = "Profile"
+Settings = "Settings"
