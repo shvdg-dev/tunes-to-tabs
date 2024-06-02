@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 	consts "tabs/internal/constants"
-	"tabs/pkg/database"
+	"tabs/pkg/base/database"
 )
 
 // Service is for managing sessions.

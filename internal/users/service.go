@@ -2,8 +2,8 @@ package users
 
 import (
 	_ "github.com/lib/pq"
-	"tabs/pkg/database"
-	"tabs/pkg/utils"
+	"tabs/pkg/base/database"
+	"tabs/pkg/base/utils"
 
 	"log"
 )

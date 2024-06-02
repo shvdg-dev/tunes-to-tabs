@@ -4,9 +4,9 @@ import (
 	"tabs/internal/info"
 	sess "tabs/internal/sessions"
 	"tabs/internal/users"
-	"tabs/pkg/database"
-	"tabs/pkg/i18n"
-	loggr "tabs/pkg/logger"
+	"tabs/pkg/base/database"
+	"tabs/pkg/base/i18n"
+	loggr "tabs/pkg/base/logger"
 )
 
 // Context represents the execution context of the application.

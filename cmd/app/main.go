@@ -14,7 +14,7 @@ import (
 	midware "tabs/internal/middleware"
 	rend "tabs/internal/renderer"
 	vi "tabs/internal/views"
-	"tabs/pkg/i18n"
+	"tabs/pkg/base/i18n"
 )
 
 // main is the entry point of the application.

@@ -5,7 +5,7 @@ import (
 	"tabs/internal/constants"
 	inf "tabs/internal/info"
 	data "tabs/internal/login/data"
-	"tabs/pkg/utils"
+	"tabs/pkg/base/utils"
 )
 
 // LoggingIn handles the login request by validating the user and redirecting accordingly.
