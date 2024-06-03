@@ -5,6 +5,7 @@ import (
 	. "tabs/internal/docs/handlers"
 	. "tabs/internal/error/handlers"
 	. "tabs/internal/home/handlers"
+	. "tabs/internal/jobs/handlers"
 	. "tabs/internal/login/handlers"
 	"tabs/internal/renderer"
 	"tabs/internal/views"
@@ -15,6 +16,7 @@ type Handlers struct {
 	Home  *Home
 	Docs  *Docs
 	Login *Login
+	Jobs  *Jobs
 	Error *Error
 }
 
@@ -22,7 +24,8 @@ type Handlers struct {
 func NewHandlers(context *ctx.Context, views *views.Views, renderer *renderer.Renderer) *Handlers {
 	return &Handlers{
 		Home:  NewHome(context, views, renderer),
-		Login: NewLogin(context, views, renderer),
 		Docs:  NewDocs(context, views, renderer),
+		Login: NewLogin(context, views, renderer),
+		Jobs:  NewJobs(context, views, renderer),
 		Error: NewError(context, views, renderer)}
 }

@@ -10,6 +10,7 @@ import (
 	"tabs/internal/files"
 	hand "tabs/internal/handlers"
 	"tabs/internal/home"
+	"tabs/internal/jobs"
 	"tabs/internal/login"
 	midware "tabs/internal/middleware"
 	rend "tabs/internal/renderer"
@@ -45,6 +46,7 @@ func setupRouter(router chi.Router, context *ctx.Context, handlers *hand.Handler
 	erro.NewError(handlers).SetupRouter(router)
 	home.NewHome(handlers).SetupRouter(router)
 	docs.NewDocs(handlers).SetupRouter(router)
+	jobs.NewJobs(handlers).SetupRouter(router)
 	login.NewLogin(context, handlers).SetupRouter(router)
 	return router
 }

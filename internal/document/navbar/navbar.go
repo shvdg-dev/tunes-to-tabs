@@ -62,7 +62,8 @@ func (n *Navbar) CreateEmblem() Node {
 func (n *Navbar) CreateNavItems(info *info.Info) Node {
 	n.NavItems = []NavItem{
 		NewNavItem(consts.PathHome, n.Context.Localizer.Localize(consts.BundleHome)),
-		NewNavItem(consts.PathDocs, n.Context.Localizer.Localize(consts.BundleDocs))}
+		NewNavItem(consts.PathDocs, n.Context.Localizer.Localize(consts.BundleDocs)),
+		NewNavItem(consts.PathJobs, n.Context.Localizer.Localize(consts.BundleJobs))}
 	n.setActiveNavItem(info.Path)
 	return Div(ID("menu-items"), hx.SwapOOB("true"), Class("navbar-center"),
 		Ul(Class("menu menu-horizontal px-1"),

@@ -6,6 +6,7 @@ import (
 	. "tabs/internal/document/navbar"
 	. "tabs/internal/error/views"
 	. "tabs/internal/home/views"
+	. "tabs/internal/jobs/views"
 	. "tabs/internal/login/views"
 )
 
@@ -15,6 +16,7 @@ type Views struct {
 	Home   *Home
 	Docs   *Docs
 	Login  *Login
+	Jobs   *Jobs
 	Error  *Error
 }
 
@@ -25,6 +27,7 @@ func NewViews(context *ctx.Context) *Views {
 		Home:   NewHome(context),
 		Docs:   NewDocs(context),
 		Login:  NewLogin(context),
+		Jobs:   NewJobs(context),
 		Error:  NewError(context),
 	}
 }

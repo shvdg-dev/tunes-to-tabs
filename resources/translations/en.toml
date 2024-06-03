@@ -14,6 +14,7 @@ NotAuthenticatedTitle = "401 - Not authenticated, whoops!"
 # Navigation related
 Home = "Home"
 Docs = "Docs"
+Jobs = "Jobs"
 NavigateToLogin = "Go to login"
 NavigateToHome = "Come back home"
 PageNotFound = "This page does not even exist!?"
@@ -22,6 +23,7 @@ PageNotFoundTitle = "404 - Page not found!"
 # Page Introductions
 HomeIntroduction = "Welcome on the home page!"
 DocsIntroduction = "Welcome to the docs! It is empty of course!"
+JobsIntroduction = "Welcome to jobs!"
 
 # Other
 Welcome = "Welcome"

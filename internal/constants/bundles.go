@@ -19,6 +19,7 @@ const (
 const (
 	BundleHome              string = "Home"
 	BundleDocs              string = "Docs"
+	BundleJobs              string = "Jobs"
 	BundleNavigateToLogin   string = "NavigateToLogin"
 	BundleNavigateToHome    string = "NavigateToHome"
 	BundlePageNotFound      string = "PageNotFound"
@@ -29,6 +30,7 @@ const (
 const (
 	BundleHomeIntro string = "HomeIntroduction"
 	BundleDocsIntro string = "DocsIntroduction"
+	BundleJobsIntro string = "JobsIntroduction"
 )
 
 // Other
