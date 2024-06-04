@@ -1,41 +1,31 @@
 package constants
 
-// Authentication related
 const (
-	BundleLogin                  string = "Login"
-	BundleLogout                 string = "Logout"
-	BundlePassword               string = "Password"
-	BundleRegister               string = "Register"
-	BundleEmail                  string = "Email"
-	BundleRegisterQuestion       string = "RegisterQuestion"
-	BundleInvalidEmailOrPassword string = "InvalidEmailOrPassword"
-	BundleForgotPasswordQuestion string = "ForgotPasswordQuestion"
-	BundleResetPassword          string = "ResetPassword"
-	BundleAuthenticationRequired string = "AuthenticationRequired"
-	BundleNotAuthenticatedTitle  string = "NotAuthenticatedTitle"
-)
-
-// Navigation related
-const (
-	BundleHome              string = "Home"
-	BundleDocs              string = "Docs"
-	BundleJobs              string = "Jobs"
-	BundleNavigateToLogin   string = "NavigateToLogin"
-	BundleNavigateToHome    string = "NavigateToHome"
-	BundlePageNotFound      string = "PageNotFound"
-	BundlePageNotFoundTitle string = "PageNotFoundTitle"
-)
-
-// Page Introductions
-const (
-	BundleHomeIntro string = "HomeIntroduction"
-	BundleDocsIntro string = "DocsIntroduction"
-	BundleJobsIntro string = "JobsIntroduction"
-)
-
-// Other
-const (
-	BundleWelcome  string = "Welcome"
-	BundleProfile  string = "Profile"
-	BundleSettings string = "Settings"
+	BundleAuthenticationRequired   string = "AuthenticationRequired"
+	BundleDocs                     string = "Docs"
+	BundleDocsIntro                string = "DocsIntroduction"
+	BundleEmail                    string = "Email"
+	BundleForgotPasswordQuestion   string = "ForgotPasswordQuestion"
+	BundleHome                     string = "Home"
+	BundleHomeIntro                string = "HomeIntroduction"
+	BundleInvalidEmailOrPassword   string = "InvalidEmailOrPassword"
+	BundleJobs                     string = "Jobs"
+	BundleJobsIntro                string = "JobsIntroduction"
+	BundleLogin                    string = "Login"
+	BundleLogout                   string = "Logout"
+	BundleNavigateToHome           string = "NavigateToHome"
+	BundleNavigateToLogin          string = "NavigateToLogin"
+	BundleNotAuthenticatedTitle    string = "NotAuthenticatedTitle"
+	BundlePageNotFound             string = "PageNotFound"
+	BundlePageNotFoundTitle        string = "PageNotFoundTitle"
+	BundlePassword                 string = "Password"
+	BundlePlaylistFieldTitle       string = "PlaylistFieldTitle"
+	BundlePlaylistFieldPlaceholder string = "PlaylistFieldPlaceholder"
+	BundleProfile                  string = "Profile"
+	BundleRegister                 string = "Register"
+	BundleRegisterQuestion         string = "RegisterQuestion"
+	BundleResetPassword            string = "ResetPassword"
+	BundleSettings                 string = "Settings"
+	BundleSubmit                   string = "Submit"
+	BundleWelcome                  string = "Welcome"
 )
