@@ -2,11 +2,11 @@ package context
 
 import (
 	"tabs/internal/info"
-	sess "tabs/internal/sessions"
 	"tabs/internal/users"
 	"tabs/pkg/base/database"
 	"tabs/pkg/base/i18n"
 	loggr "tabs/pkg/base/logger"
+	sess "tabs/pkg/base/sessions"
 )
 
 // Context represents the execution context of the application.

@@ -2,7 +2,7 @@ package info
 
 import (
 	"net/http"
-	"tabs/internal/sessions"
+	"tabs/pkg/base/sessions"
 )
 
 // Informer provides information about a particular request.
