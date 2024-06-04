@@ -19,7 +19,7 @@ func (j *Jobs) CreateJobsPage() Node {
 
 // CreatePlaylistToTabsForm creates a form for processing a playlist to tabs.
 func (j *Jobs) CreatePlaylistToTabsForm() Node {
-	return FormEl(hx.Post(""),
+	return FormEl(hx.Post(consts.PathPlaylistToTabs), hx.Swap("none"),
 		Div(Class("flex flex-col space-y-2"),
 			j.CreatePlaylistLinkField(),
 			j.CreateSubmitButton()))

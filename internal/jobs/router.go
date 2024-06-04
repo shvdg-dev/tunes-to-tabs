@@ -20,4 +20,5 @@ func NewJobs(handlers *hand.Handlers) *Jobs {
 func (h *Jobs) SetupRouter(router chi.Router) {
 	router.Get("/", h.Handlers.Jobs.JobsPage)
 	router.Get(consts.PathJobs, h.Handlers.Jobs.JobsPage)
+	router.Post(consts.PathPlaylistToTabs, h.Handlers.Jobs.PlaylistToTabs)
 }
