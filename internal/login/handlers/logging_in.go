@@ -25,7 +25,7 @@ func (l *Login) extractCredentials(request *http.Request) (string, string) {
 
 // isValidUser validates if the provided email and password are valid for the user.
 func (l *Login) isValidUser(email, password string) bool {
-	return utils.IsValidEmail(email) && l.Context.Users.IsPasswordCorrect(email, password)
+	return utils.IsValidEmail(email) && l.Context.API.Users.IsPasswordCorrect(email, password)
 }
 
 // redirectAuthenticatedUser redirects the authenticated user to the home page after successful login.

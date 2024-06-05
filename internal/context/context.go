@@ -2,11 +2,11 @@ package context
 
 import (
 	"tabs/internal/info"
-	"tabs/internal/users"
 	"tabs/pkg/base/database"
 	"tabs/pkg/base/i18n"
 	loggr "tabs/pkg/base/logger"
 	sess "tabs/pkg/base/sessions"
+	ttt "tabs/pkg/ttt-api"
 )
 
 // Context represents the execution context of the application.
@@ -15,7 +15,7 @@ type Context struct {
 	Logger    *loggr.Logger
 	Informer  *info.Informer
 	Sessions  *sess.Service
-	Users     *users.Service
+	API       *ttt.API
 }
 
 // NewContext initializes a new Context structure with the given dependencies.
@@ -26,5 +26,5 @@ func NewContext(database *database.Manager, localizer *i18n.Localizer) *Context 
 		Logger:    loggr.NewLogger(),
 		Informer:  info.NewInformer(sessions),
 		Sessions:  sessions,
-		Users:     users.NewService(database)}
+		API:       ttt.NewAPI(database)}
 }

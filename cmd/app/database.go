@@ -14,7 +14,7 @@ func createDatabase() *database.Manager {
 
 // prepareDatabase prepares the database by creating tables and inserting data.
 func prepareDatabase(context *ctx.Context) {
-	context.Users.CreateUsersTable()
+	context.API.Users.CreateUsersTable()
 	context.Sessions.CreateSessionsTable()
 	insertAdmin(context)
 }
@@ -23,5 +23,5 @@ func prepareDatabase(context *ctx.Context) {
 func insertAdmin(context *ctx.Context) {
 	email := environment.GetValueAsString(adminInitialEmailKey)
 	password := environment.GetValueAsString(adminInitialPasswordKey)
-	context.Users.InsertUser(email, password)
+	context.API.Users.InsertUser(email, password)
 }
