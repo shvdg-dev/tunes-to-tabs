@@ -1,3 +1,6 @@
 [submodule "pkg/base"]
 	path = pkg/base
 	url = https://github.com/shvdg-dev/base-pkg.git
+[submodule "pkg/ttt-api"]
+	path = pkg/ttt-api
+	url = https://github.com/shvdg-dev/ttt-api.git
