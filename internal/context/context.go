@@ -19,7 +19,7 @@ type Context struct {
 }
 
 // NewContext initializes a new Context structure with the given dependencies.
-func NewContext(database *database.Connection, localizer *i18n.Localizer) *Context {
+func NewContext(database *database.Manager, localizer *i18n.Localizer) *Context {
 	sessions := sess.NewService(database)
 	return &Context{
 		Localizer: localizer,

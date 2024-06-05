@@ -7,9 +7,9 @@ import (
 )
 
 // createDatabase initializes the database connection by retrieving the database URL from the environment.
-func createDatabase() *database.Connection {
+func createDatabase() *database.Manager {
 	URL := environment.GetValueAsString(databaseUrlKey)
-	return database.NewConnection(URL)
+	return database.NewManager(databaseDriver, URL)
 }
 
 // prepareDatabase prepares the database by creating tables and inserting data.

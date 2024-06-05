@@ -10,11 +10,11 @@ import (
 
 // Service is for managing users.
 type Service struct {
-	Database *database.Connection
+	Database *database.Manager
 }
 
 // NewService creates a new instance of the Service struct.
-func NewService(database *database.Connection) *Service {
+func NewService(database *database.Manager) *Service {
 	return &Service{Database: database}
 }
 
