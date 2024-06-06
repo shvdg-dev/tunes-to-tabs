@@ -5,8 +5,8 @@ import (
 	. "github.com/maragudk/gomponents"
 	hx "github.com/maragudk/gomponents-htmx"
 	. "github.com/maragudk/gomponents/html"
-	consts "tabs/internal/constants"
-	ctx "tabs/internal/context"
+	consts "github.com/shvdg-dev/tunes-to-tabs/internal/constants"
+	ctx "github.com/shvdg-dev/tunes-to-tabs/internal/context"
 )
 
 // Error is used for views regarding errors.

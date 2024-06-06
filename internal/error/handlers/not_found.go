@@ -1,9 +1,9 @@
 package handlers
 
 import (
+	consts "github.com/shvdg-dev/tunes-to-tabs/internal/constants"
+	doc "github.com/shvdg-dev/tunes-to-tabs/internal/info"
 	"net/http"
-	consts "tabs/internal/constants"
-	doc "tabs/internal/info"
 )
 
 // NotFound handles HTTP requests for a 404 Not Found error, by rendering the appropriate error page.

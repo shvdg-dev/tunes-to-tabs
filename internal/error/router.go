@@ -2,7 +2,7 @@ package error
 
 import (
 	"github.com/go-chi/chi/v5"
-	hand "tabs/internal/handlers"
+	hand "github.com/shvdg-dev/tunes-to-tabs/internal/handlers"
 )
 
 // Error is used for routing and handling regarding errors.

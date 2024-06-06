@@ -1,9 +1,9 @@
 package handlers
 
 import (
+	"github.com/shvdg-dev/tunes-to-tabs/internal/constants"
+	info2 "github.com/shvdg-dev/tunes-to-tabs/internal/info"
 	"net/http"
-	"tabs/internal/constants"
-	info2 "tabs/internal/info"
 )
 
 // HomePage handles the request for the home page.

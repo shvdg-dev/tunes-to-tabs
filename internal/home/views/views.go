@@ -1,6 +1,6 @@
 package views
 
-import "tabs/internal/context"
+import "github.com/shvdg-dev/tunes-to-tabs/internal/context"
 
 // Home is used for views regarding the home page.
 type Home struct {

@@ -1,6 +1,6 @@
 package views
 
-import "tabs/internal/context"
+import "github.com/shvdg-dev/tunes-to-tabs/internal/context"
 
 // Jobs is used for views regarding the home page.
 type Jobs struct {

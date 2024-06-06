@@ -1,10 +1,10 @@
 package handlers
 
 import (
+	"github.com/shvdg-dev/tunes-to-tabs/internal/constants"
+	inf "github.com/shvdg-dev/tunes-to-tabs/internal/info"
+	viewData "github.com/shvdg-dev/tunes-to-tabs/internal/login/data"
 	"net/http"
-	"tabs/internal/constants"
-	inf "tabs/internal/info"
-	viewData "tabs/internal/login/data"
 )
 
 // LoginPage handles the login page request.

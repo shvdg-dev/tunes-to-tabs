@@ -5,9 +5,9 @@ import (
 	hx "github.com/maragudk/gomponents-htmx"
 	. "github.com/maragudk/gomponents/components"
 	. "github.com/maragudk/gomponents/html"
-	ctx "tabs/internal/context"
-	"tabs/internal/info"
-	vi "tabs/internal/views"
+	ctx "github.com/shvdg-dev/tunes-to-tabs/internal/context"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/info"
+	vi "github.com/shvdg-dev/tunes-to-tabs/internal/views"
 )
 
 // Document represents a document, used for wrapping content in.

@@ -1,9 +1,9 @@
 package handlers
 
 import (
+	"github.com/shvdg-dev/tunes-to-tabs/internal/constants"
+	inf "github.com/shvdg-dev/tunes-to-tabs/internal/info"
 	"net/http"
-	"tabs/internal/constants"
-	inf "tabs/internal/info"
 )
 
 // JobsPage handles the request for the home page.

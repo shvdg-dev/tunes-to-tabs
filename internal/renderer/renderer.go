@@ -3,12 +3,12 @@ package renderer
 import (
 	. "github.com/maragudk/gomponents"
 	hxhttp "github.com/maragudk/gomponents-htmx/http"
+	consts "github.com/shvdg-dev/tunes-to-tabs/internal/constants"
+	ctx "github.com/shvdg-dev/tunes-to-tabs/internal/context"
+	doc "github.com/shvdg-dev/tunes-to-tabs/internal/document"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/info"
+	vi "github.com/shvdg-dev/tunes-to-tabs/internal/views"
 	"net/http"
-	consts "tabs/internal/constants"
-	ctx "tabs/internal/context"
-	doc "tabs/internal/document"
-	"tabs/internal/info"
-	vi "tabs/internal/views"
 )
 
 // Renderer is responsible for rendering documents and partials.

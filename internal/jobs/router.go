@@ -2,8 +2,8 @@ package jobs
 
 import (
 	"github.com/go-chi/chi/v5"
-	consts "tabs/internal/constants"
-	hand "tabs/internal/handlers"
+	consts "github.com/shvdg-dev/tunes-to-tabs/internal/constants"
+	hand "github.com/shvdg-dev/tunes-to-tabs/internal/handlers"
 )
 
 // Jobs is used for routing and handling regarding the jobs page.

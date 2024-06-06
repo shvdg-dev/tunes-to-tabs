@@ -1,6 +1,6 @@
 package views
 
-import "tabs/internal/context"
+import "github.com/shvdg-dev/tunes-to-tabs/internal/context"
 
 // Docs is used for views regarding documentation.
 type Docs struct {

@@ -2,20 +2,20 @@ package main
 
 import (
 	"github.com/go-chi/chi/v5"
+	"github.com/shvdg-dev/base-pkg/i18n"
+	ctx "github.com/shvdg-dev/tunes-to-tabs/internal/context"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/docs"
+	erro "github.com/shvdg-dev/tunes-to-tabs/internal/error"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/files"
+	hand "github.com/shvdg-dev/tunes-to-tabs/internal/handlers"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/home"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/jobs"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/login"
+	midware "github.com/shvdg-dev/tunes-to-tabs/internal/middleware"
+	rend "github.com/shvdg-dev/tunes-to-tabs/internal/renderer"
+	vi "github.com/shvdg-dev/tunes-to-tabs/internal/views"
 	"log"
 	"net/http"
-	ctx "tabs/internal/context"
-	"tabs/internal/docs"
-	erro "tabs/internal/error"
-	"tabs/internal/files"
-	hand "tabs/internal/handlers"
-	"tabs/internal/home"
-	"tabs/internal/jobs"
-	"tabs/internal/login"
-	midware "tabs/internal/middleware"
-	rend "tabs/internal/renderer"
-	vi "tabs/internal/views"
-	"tabs/pkg/base/i18n"
 )
 
 // main is the entry point of the application.

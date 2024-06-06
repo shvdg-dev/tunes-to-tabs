@@ -6,9 +6,9 @@ import (
 	hx "github.com/maragudk/gomponents-htmx"
 	"github.com/maragudk/gomponents/components"
 	. "github.com/maragudk/gomponents/html"
-	consts "tabs/internal/constants"
-	"tabs/internal/info"
-	"tabs/internal/login/data"
+	consts "github.com/shvdg-dev/tunes-to-tabs/internal/constants"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/info"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/login/data"
 )
 
 // CreateLoginPage creates a login page.

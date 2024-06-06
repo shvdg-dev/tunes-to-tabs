@@ -1,9 +1,9 @@
 package main
 
 import (
-	ctx "tabs/internal/context"
-	"tabs/pkg/base/database"
-	"tabs/pkg/base/utils"
+	"github.com/shvdg-dev/base-pkg/database"
+	"github.com/shvdg-dev/base-pkg/utils"
+	ctx "github.com/shvdg-dev/tunes-to-tabs/internal/context"
 )
 
 // createDatabase initializes the database connection by retrieving the database URL from the environment.

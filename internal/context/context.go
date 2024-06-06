@@ -1,18 +1,18 @@
 package context
 
 import (
-	"tabs/internal/info"
-	"tabs/pkg/base/database"
-	"tabs/pkg/base/i18n"
-	loggr "tabs/pkg/base/logger"
-	sess "tabs/pkg/base/sessions"
-	ttt "tabs/pkg/ttt-api"
+	"github.com/shvdg-dev/base-pkg/database"
+	"github.com/shvdg-dev/base-pkg/i18n"
+	"github.com/shvdg-dev/base-pkg/logger"
+	sess "github.com/shvdg-dev/base-pkg/sessions"
+	ttt "github.com/shvdg-dev/tunes-to-tabs-api"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/info"
 )
 
 // Context represents the execution context of the application.
 type Context struct {
 	Localizer *i18n.Localizer
-	Logger    *loggr.Logger
+	Logger    *logger.Logger
 	Informer  *info.Informer
 	Sessions  *sess.Service
 	API       *ttt.API
@@ -23,7 +23,7 @@ func NewContext(database *database.Manager, localizer *i18n.Localizer) *Context 
 	sessions := sess.NewService(database)
 	return &Context{
 		Localizer: localizer,
-		Logger:    loggr.NewLogger(),
+		Logger:    logger.NewLogger(),
 		Informer:  info.NewInformer(sessions),
 		Sessions:  sessions,
 		API:       ttt.NewAPI(database)}

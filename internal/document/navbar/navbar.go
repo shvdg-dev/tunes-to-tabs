@@ -6,9 +6,9 @@ import (
 	hx "github.com/maragudk/gomponents-htmx"
 	. "github.com/maragudk/gomponents/components"
 	. "github.com/maragudk/gomponents/html"
-	consts "tabs/internal/constants"
-	ctx "tabs/internal/context"
-	"tabs/internal/info"
+	consts "github.com/shvdg-dev/tunes-to-tabs/internal/constants"
+	ctx "github.com/shvdg-dev/tunes-to-tabs/internal/context"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/info"
 )
 
 // Navbar represents a navigation bar.

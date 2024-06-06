@@ -1,11 +1,11 @@
 package handlers
 
 import (
+	"github.com/shvdg-dev/base-pkg/utils"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/constants"
+	inf "github.com/shvdg-dev/tunes-to-tabs/internal/info"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/login/data"
 	"net/http"
-	"tabs/internal/constants"
-	inf "tabs/internal/info"
-	data "tabs/internal/login/data"
-	"tabs/pkg/base/utils"
 )
 
 // LoggingIn handles the login request by validating the user and redirecting accordingly.

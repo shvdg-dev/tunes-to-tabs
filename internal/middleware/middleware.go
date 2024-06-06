@@ -1,13 +1,13 @@
 package middleware
 
 import (
+	consts "github.com/shvdg-dev/tunes-to-tabs/internal/constants"
+	ctx "github.com/shvdg-dev/tunes-to-tabs/internal/context"
+	inf "github.com/shvdg-dev/tunes-to-tabs/internal/info"
+	rend "github.com/shvdg-dev/tunes-to-tabs/internal/renderer"
+	vi "github.com/shvdg-dev/tunes-to-tabs/internal/views"
 	"net/http"
 	"strings"
-	consts "tabs/internal/constants"
-	ctx "tabs/internal/context"
-	inf "tabs/internal/info"
-	rend "tabs/internal/renderer"
-	vi "tabs/internal/views"
 )
 
 // Middleware is used for handling middleware.
@@ -25,7 +25,7 @@ func NewMiddleware(context *ctx.Context, views *vi.Views, renderer *rend.Rendere
 // Authentication enforces authentication for protected resources.
 func (m *Middleware) Authentication(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
-		isAuthenticated := m.Context.Sessions.IsAuthenticated(request)
+		isAuthenticated := false
 		if !IsResourceAccessible(request.URL.Path) && !isAuthenticated {
 			writer.WriteHeader(http.StatusUnauthorized)
 			title := m.Context.Localizer.Localize(consts.BundleNotAuthenticatedTitle)

@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	ctx "tabs/internal/context"
-	rend "tabs/internal/renderer"
-	"tabs/internal/views"
+	ctx "github.com/shvdg-dev/tunes-to-tabs/internal/context"
+	rend "github.com/shvdg-dev/tunes-to-tabs/internal/renderer"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/views"
 )
 
 // Login is used for handlers regarding logging in or out.

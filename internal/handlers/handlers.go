@@ -1,14 +1,14 @@
 package handlers
 
 import (
-	ctx "tabs/internal/context"
-	. "tabs/internal/docs/handlers"
-	. "tabs/internal/error/handlers"
-	. "tabs/internal/home/handlers"
-	. "tabs/internal/jobs/handlers"
-	. "tabs/internal/login/handlers"
-	"tabs/internal/renderer"
-	"tabs/internal/views"
+	ctx "github.com/shvdg-dev/tunes-to-tabs/internal/context"
+	. "github.com/shvdg-dev/tunes-to-tabs/internal/docs/handlers"
+	. "github.com/shvdg-dev/tunes-to-tabs/internal/error/handlers"
+	. "github.com/shvdg-dev/tunes-to-tabs/internal/home/handlers"
+	. "github.com/shvdg-dev/tunes-to-tabs/internal/jobs/handlers"
+	. "github.com/shvdg-dev/tunes-to-tabs/internal/login/handlers"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/renderer"
+	"github.com/shvdg-dev/tunes-to-tabs/internal/views"
 )
 
 // Handlers represents a collection of handlers.

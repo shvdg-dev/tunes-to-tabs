@@ -6,7 +6,7 @@ import (
 	hx "github.com/maragudk/gomponents-htmx"
 	"github.com/maragudk/gomponents/components"
 	. "github.com/maragudk/gomponents/html"
-	consts "tabs/internal/constants"
+	consts "github.com/shvdg-dev/tunes-to-tabs/internal/constants"
 )
 
 // CreateJobsPage creates a home page.

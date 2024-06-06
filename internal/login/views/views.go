@@ -1,6 +1,6 @@
 package views
 
-import ctx "tabs/internal/context"
+import ctx "github.com/shvdg-dev/tunes-to-tabs/internal/context"
 
 // Login is used for views regarding logging in.
 type Login struct {

@@ -1,8 +1,8 @@
 package info
 
 import (
+	"github.com/shvdg-dev/base-pkg/sessions"
 	"net/http"
-	"tabs/pkg/base/sessions"
 )
 
 // Informer provides information about a particular request.
@@ -17,7 +17,7 @@ func NewInformer(sessions *sessions.Service) *Informer {
 
 // NewInfo creates a new Info object based on the provided request and options.
 func (i *Informer) NewInfo(request *http.Request, opts ...Option) *Info {
-	info := &Info{Path: request.URL.Path, IsAuthenticated: i.Sessions.IsAuthenticated(request)}
+	info := &Info{Path: request.URL.Path, IsAuthenticated: false}
 	for _, opt := range opts {
 		opt(info)
 	}

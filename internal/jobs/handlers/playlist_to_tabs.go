@@ -1,9 +1,9 @@
 package handlers
 
 import (
+	"github.com/shvdg-dev/tunes-to-tabs/internal/constants"
 	"log"
 	"net/http"
-	"tabs/internal/constants"
 )
 
 // PlaylistToTabs handles the request for the home page.

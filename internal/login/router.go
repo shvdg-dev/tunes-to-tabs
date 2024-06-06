@@ -2,9 +2,9 @@ package login
 
 import (
 	"github.com/go-chi/chi/v5"
-	consts "tabs/internal/constants"
-	ctx "tabs/internal/context"
-	hand "tabs/internal/handlers"
+	consts "github.com/shvdg-dev/tunes-to-tabs/internal/constants"
+	ctx "github.com/shvdg-dev/tunes-to-tabs/internal/context"
+	hand "github.com/shvdg-dev/tunes-to-tabs/internal/handlers"
 )
 
 // Login is used for routing and handling regarding logging in or out.
