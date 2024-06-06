@@ -4,3 +4,6 @@
 [submodule "pkg/ttt-api"]
 	path = pkg/ttt-api
 	url = https://github.com/shvdg-dev/ttt-api.git
+[submodule "pkg/spotify"]
+	path = pkg/spotify
+	url = https://github.com/shvdg-dev/spotify.git
