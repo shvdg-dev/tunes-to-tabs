@@ -1,4 +1,4 @@
-module tabs
+module github.com/shvdg-dev/tabs
 
 go 1.22.0
 
