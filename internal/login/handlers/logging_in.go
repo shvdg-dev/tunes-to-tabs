@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"github.com/shvdg-dev/base-pkg/utils"
+	"github.com/shvdg-dev/base-logic/pkg"
 	"github.com/shvdg-dev/tunes-to-tabs/internal/constants"
 	inf "github.com/shvdg-dev/tunes-to-tabs/internal/info"
 	"github.com/shvdg-dev/tunes-to-tabs/internal/login/data"
@@ -25,7 +25,7 @@ func (l *Login) extractCredentials(request *http.Request) (string, string) {
 
 // isValidUser validates if the provided email and password are valid for the user.
 func (l *Login) isValidUser(email, password string) bool {
-	return utils.IsValidEmail(email) && l.Context.API.Users.IsPasswordCorrect(email, password)
+	return pkg.IsValidEmail(email) && l.Context.API.Users.IsPasswordCorrect(email, password)
 }
 
 // redirectAuthenticatedUser redirects the authenticated user to the home page after successful login.

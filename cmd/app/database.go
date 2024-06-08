@@ -1,15 +1,14 @@
 package main
 
 import (
-	"github.com/shvdg-dev/base-pkg/database"
-	"github.com/shvdg-dev/base-pkg/utils"
+	logic "github.com/shvdg-dev/base-logic/pkg"
 	ctx "github.com/shvdg-dev/tunes-to-tabs/internal/context"
 )
 
 // createDatabase initializes the database connection by retrieving the database URL from the environment.
-func createDatabase() *database.Manager {
-	URL := utils.GetValueAsString(databaseUrlKey)
-	return database.NewManager(databaseDriver, URL)
+func createDatabase() *logic.DatabaseManager {
+	URL := logic.GetValueAsString(databaseUrlKey)
+	return logic.NewDatabaseManager(databaseDriver, URL)
 }
 
 // prepareDatabase prepares the database by creating tables and inserting data.
@@ -21,7 +20,7 @@ func prepareDatabase(context *ctx.Context) {
 
 // insertAdmin inserts an administrator user into the database.
 func insertAdmin(context *ctx.Context) {
-	email := utils.GetValueAsString(adminInitialEmailKey)
-	password := utils.GetValueAsString(adminInitialPasswordKey)
+	email := logic.GetValueAsString(adminInitialEmailKey)
+	password := logic.GetValueAsString(adminInitialPasswordKey)
 	context.API.Users.InsertUser(email, password)
 }

@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/go-chi/chi/v5"
-	"github.com/shvdg-dev/base-pkg/i18n"
+	logic "github.com/shvdg-dev/base-logic/pkg"
 	ctx "github.com/shvdg-dev/tunes-to-tabs/internal/context"
 	"github.com/shvdg-dev/tunes-to-tabs/internal/docs"
 	erro "github.com/shvdg-dev/tunes-to-tabs/internal/error"
@@ -34,8 +34,8 @@ func main() {
 }
 
 // createLocalizer initializes a localizer instance, adding the English translation and returning the localizer.
-func createLocalizer() *i18n.Localizer {
-	trans := i18n.NewLocalizer()
+func createLocalizer() *logic.Localizer {
+	trans := logic.NewLocalizer()
 	trans.AddLocalization(englishTranslation)
 	return trans
 }

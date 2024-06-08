@@ -1,18 +1,18 @@
 package info
 
 import (
-	"github.com/shvdg-dev/base-pkg/sessions"
+	logic "github.com/shvdg-dev/base-logic/pkg"
 	consts "github.com/shvdg-dev/tunes-to-tabs/internal/constants"
 	"net/http"
 )
 
 // Informer provides information about a particular request.
 type Informer struct {
-	Sessions *sessions.Service
+	Sessions *logic.SessionManager
 }
 
 // NewInformer creates a new Informer instance.
-func NewInformer(sessions *sessions.Service) *Informer {
+func NewInformer(sessions *logic.SessionManager) *Informer {
 	return &Informer{Sessions: sessions}
 }
 
@@ -27,7 +27,7 @@ func (i *Informer) NewInfo(request *http.Request, opts ...Option) *Info {
 
 // IsAuthenticated checks if the user is authenticated based on the session stored in the Informer object.
 func (i *Informer) IsAuthenticated(request *http.Request) bool {
-	isAuthenticated, ok := i.Sessions.Get(consts.ValueIsAuthenticated, request).(bool)
+	isAuthenticated, ok := i.Sessions.Get(request, consts.ValueIsAuthenticated).(bool)
 	if !ok {
 		return false
 	}
@@ -35,9 +35,9 @@ func (i *Informer) IsAuthenticated(request *http.Request) bool {
 }
 
 func (i *Informer) SetAuthenticated(request *http.Request) {
-	i.Sessions.Store(consts.ValueIsAuthenticated, true, request)
+	i.Sessions.Store(request, consts.ValueIsAuthenticated, true)
 }
 
 func (i *Informer) SetUnauthenticated(request *http.Request) {
-	i.Sessions.Store(consts.ValueIsAuthenticated, false, request)
+	i.Sessions.Store(request, consts.ValueIsAuthenticated, false)
 }
