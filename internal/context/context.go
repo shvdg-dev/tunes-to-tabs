@@ -14,17 +14,14 @@ type Context struct {
 	Localizer *i18n.Localizer
 	Logger    *logger.Logger
 	Informer  *info.Informer
-	Sessions  *sess.Service
 	API       *ttt.API
 }
 
 // NewContext initializes a new Context structure with the given dependencies.
 func NewContext(database *database.Manager, localizer *i18n.Localizer) *Context {
-	sessions := sess.NewService(database)
 	return &Context{
 		Localizer: localizer,
 		Logger:    logger.NewLogger(),
-		Informer:  info.NewInformer(sessions),
-		Sessions:  sessions,
+		Informer:  info.NewInformer(sess.NewService(database)),
 		API:       ttt.NewAPI(database)}
 }

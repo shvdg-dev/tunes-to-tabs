@@ -54,7 +54,7 @@ func setupRouter(router chi.Router, context *ctx.Context, handlers *hand.Handler
 // setupMiddleware initializes the middleware using the provided context, views, and renderer.
 func setupMiddleware(router chi.Router, context *ctx.Context, views *vi.Views, renderer *rend.Renderer) *midware.Middleware {
 	middleware := midware.NewMiddleware(context, views, renderer)
-	router.Use(context.Sessions.Manager.LoadAndSave)
+	router.Use(context.Informer.Sessions.Manager.LoadAndSave)
 	router.Use(middleware.Authentication)
 	return middleware
 }

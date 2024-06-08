@@ -15,7 +15,7 @@ func createDatabase() *database.Manager {
 // prepareDatabase prepares the database by creating tables and inserting data.
 func prepareDatabase(context *ctx.Context) {
 	context.API.Users.CreateUsersTable()
-	context.Sessions.CreateSessionsTable()
+	//TODO: context.Sessions.CreateSessionsTable()
 	insertAdmin(context)
 }
 

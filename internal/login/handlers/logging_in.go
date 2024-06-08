@@ -30,7 +30,7 @@ func (l *Login) isValidUser(email, password string) bool {
 
 // redirectAuthenticatedUser redirects the authenticated user to the home page after successful login.
 func (l *Login) redirectAuthenticatedUser(writer http.ResponseWriter, request *http.Request) {
-	l.Context.Sessions.Store(constants.ValueIsAuthenticated, true, request)
+	l.Context.Informer.SetAuthenticated(request)
 	title := l.Context.Localizer.Localize(constants.BundleHome)
 	info := l.Context.Informer.NewInfo(request, inf.WithTitle(title), inf.WithPath(constants.PathHome))
 	homePage := l.Views.Home.CreateHomePage()

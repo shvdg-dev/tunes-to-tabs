@@ -25,7 +25,7 @@ func NewMiddleware(context *ctx.Context, views *vi.Views, renderer *rend.Rendere
 // Authentication enforces authentication for protected resources.
 func (m *Middleware) Authentication(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
-		isAuthenticated := false
+		isAuthenticated := m.Context.Informer.IsAuthenticated(request)
 		if !IsResourceAccessible(request.URL.Path) && !isAuthenticated {
 			writer.WriteHeader(http.StatusUnauthorized)
 			title := m.Context.Localizer.Localize(consts.BundleNotAuthenticatedTitle)
