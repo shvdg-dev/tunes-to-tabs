@@ -6,6 +6,7 @@ import (
 	hx "github.com/maragudk/gomponents-htmx"
 	"github.com/maragudk/gomponents/components"
 	. "github.com/maragudk/gomponents/html"
+	logic "github.com/shvdg-dev/base-logic/pkg"
 	consts "github.com/shvdg-dev/tunes-to-tabs/internal/constants"
 	"github.com/shvdg-dev/tunes-to-tabs/internal/info"
 	"github.com/shvdg-dev/tunes-to-tabs/internal/login/data"
@@ -18,13 +19,13 @@ func (l *Login) CreateLoginPage(info *info.Info, data *data.LoginData) Node {
 		Div(Class("pt-4 flex flex-col space-y-3"),
 			l.CreateLoginForm(info, data),
 			l.CreateRequestErrors(info),
-			l.CreateAccountRegisterLink(),
-			l.CreatePasswordResetLink()))
+			If(logic.GetEnvValueAsBoolean(consts.KeyAllowUserRegistration), l.CreateAccountRegisterLink()),
+			If(logic.GetEnvValueAsBoolean(consts.KeyAllowUserPasswordReset), l.CreatePasswordResetLink())))
 }
 
 // CreateLoginForm Creates the login form.
 func (l *Login) CreateLoginForm(info *info.Info, data *data.LoginData) Node {
-	return FormEl(hx.Post(consts.PathLogin), hx.Target("#content"),
+	return Form(hx.Post(consts.PathLogin), hx.Target("#content"),
 		Div(Class("flex flex-col space-y-2"),
 			l.CreateMailField(info, data.Email),
 			l.CreatePasswordField(info, data.Password),
@@ -73,20 +74,20 @@ func (l *Login) CreateLoginButton() Node {
 
 // CreateAccountRegisterLink creates the register link.
 func (l *Login) CreateAccountRegisterLink() Node {
-	return A(hx.PushURL("true"), hx.Target("#content"),
-		Div(Class("italic"),
-			Text(l.Context.Localizer.Localize(consts.BundleRegisterQuestion)),
-			Text(" "),
-			Label(Text(l.Context.Localizer.Localize(consts.BundleRegister)), Class("link link-info cursor-pointer")),
-			Text(".")))
+	return Div(Class("italic"),
+		Text(l.Context.Localizer.Localize(consts.BundleRegisterQuestion)),
+		Text(" "),
+		A(hx.PushURL("true"), hx.Target("#content"),
+			Label(Text(l.Context.Localizer.Localize(consts.BundleRegister)), Class("link link-info cursor-pointer"))),
+		Text("."))
 }
 
 // CreatePasswordResetLink creates the reset link.
 func (l *Login) CreatePasswordResetLink() Node {
-	return A(hx.PushURL("true"), hx.Target("#content"),
-		Div(Class("italic"),
-			Text(l.Context.Localizer.Localize(consts.BundleForgotPasswordQuestion)),
-			Text(" "),
-			Label(Text(l.Context.Localizer.Localize(consts.BundleResetPassword)), Class("link link-info cursor-pointer")),
-			Text(".")))
+	return Div(Class("italic"),
+		Text(l.Context.Localizer.Localize(consts.BundleForgotPasswordQuestion)),
+		Text(" "),
+		A(hx.PushURL("true"), hx.Target("#content"),
+			Label(Text(l.Context.Localizer.Localize(consts.BundleResetPassword)), Class("link link-info cursor-pointer"))),
+		Text("."))
 }

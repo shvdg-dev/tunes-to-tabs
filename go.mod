@@ -7,7 +7,7 @@ require (
 	github.com/go-chi/chi/v5 v5.0.12
 	github.com/maragudk/gomponents v0.20.3
 	github.com/maragudk/gomponents-htmx v0.5.0
-	github.com/shvdg-dev/base-logic v0.0.6
+	github.com/shvdg-dev/base-logic v0.0.7
 	github.com/shvdg-dev/tunes-to-tabs-api v0.0.4
 )
 

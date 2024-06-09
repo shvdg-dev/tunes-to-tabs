@@ -1,5 +1,6 @@
 package constants
 
+// Routes
 const (
 	PathDocs           = "/docs"
 	PathHome           = "/home"
@@ -8,4 +9,9 @@ const (
 	PathLogin          = "/login"
 	PathPublic         = "/public"
 	PathPlaylistToTabs = PathJobs + "/" + "playlist-to-tabs"
+)
+
+// Files
+const (
+	PathTranslationEnglish = "resources/translations/en.toml"
 )

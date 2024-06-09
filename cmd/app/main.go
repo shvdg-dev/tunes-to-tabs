@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/go-chi/chi/v5"
 	logic "github.com/shvdg-dev/base-logic/pkg"
+	consts "github.com/shvdg-dev/tunes-to-tabs/internal/constants"
 	ctx "github.com/shvdg-dev/tunes-to-tabs/internal/context"
 	"github.com/shvdg-dev/tunes-to-tabs/internal/docs"
 	erro "github.com/shvdg-dev/tunes-to-tabs/internal/error"
@@ -36,7 +37,7 @@ func main() {
 // createLocalizer initializes a localizer instance, adding the English translation and returning the localizer.
 func createLocalizer() *logic.Localizer {
 	trans := logic.NewLocalizer()
-	trans.AddLocalization(englishTranslation)
+	trans.AddLocalization(consts.PathTranslationEnglish)
 	return trans
 }
 
@@ -61,7 +62,7 @@ func setupMiddleware(router chi.Router, context *ctx.Context, views *vi.Views, r
 
 // startServer starts the server using the specified router.
 func startServer(router chi.Router) {
-	err := http.ListenAndServe(port, router)
+	err := http.ListenAndServe(consts.ValuePort, router)
 	if err != nil {
 		log.Fatal(err)
 	}
