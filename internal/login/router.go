@@ -3,19 +3,17 @@ package login
 import (
 	"github.com/go-chi/chi/v5"
 	consts "github.com/shvdg-dev/tunes-to-tabs/internal/constants"
-	ctx "github.com/shvdg-dev/tunes-to-tabs/internal/context"
 	hand "github.com/shvdg-dev/tunes-to-tabs/internal/handlers"
 )
 
 // Login is used for routing and handling regarding logging in or out.
 type Login struct {
-	Context  *ctx.Context
 	Handlers *hand.Handlers
 }
 
 // NewLogin creates a new Login instance.
-func NewLogin(context *ctx.Context, handlers *hand.Handlers) *Login {
-	return &Login{Context: context, Handlers: handlers}
+func NewLogin(handlers *hand.Handlers) *Login {
+	return &Login{Handlers: handlers}
 }
 
 // SetupRouter sets up the router for the Login struct.

@@ -28,7 +28,7 @@ func main() {
 	handlers := hand.NewHandlers(context, views, renderer)
 	router := chi.NewRouter()
 	setupMiddleware(router, context, views, renderer)
-	setupRouter(router, context, handlers)
+	setupRouter(router, handlers)
 	prepareDatabase(context)
 	startServer(router)
 }
@@ -41,13 +41,13 @@ func createLocalizer() *logic.Localizer {
 }
 
 // setupRouter initializes and configures the router for the application.
-func setupRouter(router chi.Router, context *ctx.Context, handlers *hand.Handlers) chi.Router {
+func setupRouter(router chi.Router, handlers *hand.Handlers) chi.Router {
 	files.SetupRouter(router)
 	erro.NewError(handlers).SetupRouter(router)
 	home.NewHome(handlers).SetupRouter(router)
 	docs.NewDocs(handlers).SetupRouter(router)
 	jobs.NewJobs(handlers).SetupRouter(router)
-	login.NewLogin(context, handlers).SetupRouter(router)
+	login.NewLogin(handlers).SetupRouter(router)
 	return router
 }
 
