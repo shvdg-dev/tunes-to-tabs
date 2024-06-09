@@ -20,8 +20,7 @@ import (
 )
 
 // main is the entry point of the application.
-// It initializes the context, views, renderer, router,
-// prepares the database, and starts the server.
+// It initializes the context, views, renderer, router, prepares the database, and starts the server.
 func main() {
 	context := ctx.NewContext(createDatabase(), createLocalizer())
 	views := vi.NewViews(context)
@@ -30,8 +29,13 @@ func main() {
 	router := chi.NewRouter()
 	setupMiddleware(router, context, views, renderer)
 	setupRouter(router, handlers)
-	prepareDatabase(context)
 	startServer(router)
+}
+
+// createDatabase initializes the database connection by retrieving the database URL from the environment.
+func createDatabase() *logic.DatabaseManager {
+	URL := logic.GetEnvValueAsString(consts.KeyDatabaseURL)
+	return logic.NewDatabaseManager(consts.ValueDatabaseDriver, URL)
 }
 
 // createLocalizer initializes a localizer instance, adding the English translation and returning the localizer.

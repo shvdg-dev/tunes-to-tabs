@@ -11,8 +11,6 @@ const (
 	KeyDatabaseURL            = "DATABASE_URL"
 	KeyAllowUserRegistration  = "USERS_ALLOW_REGISTERING"
 	KeyAllowUserPasswordReset = "USERS_ALLOW_PASSWORD_RESET"
-	KeyAdminInitialEmail      = "ADMIN_INITIAL_EMAIL"
-	KeyAdminInitialPassword   = "ADMIN_INITIAL_PASSWORD"
 )
 
 // Values
